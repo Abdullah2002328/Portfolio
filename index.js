@@ -35,7 +35,7 @@ ScrollReveal({
   reset: true,
   distance: "80px",
   duration: 2000,
-  delay: 200,
+  delay: 50,
 });
 ScrollReveal().reveal(".pic, .profile-pic, .about-img", { origin: "top" });
 ScrollReveal().reveal(
@@ -43,3 +43,11 @@ ScrollReveal().reveal(
   { origin: "bottom" }
 );
 ScrollReveal().reveal("#home h1, h2,h3", { origin: "left" });
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+hamburgerMenu.addEventListener('click', () => {
+  hamburgerMenu.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
